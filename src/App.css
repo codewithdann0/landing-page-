@@ -1,38 +1,168 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  "Poppins", sans-serif;
+  color: white;
+  background: linear-gradient(to right, #000080, rgb(49, 45, 45));
+}
+.nav-bar{
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+  height: 60px;
+  color: white;
+  border-bottom:1px solid gray;
+  margin-bottom: 40px;
+}
+.nav-bar ul{
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
+  margin-top:20px;
+  gap:20px ;
+  background: transparent;
+}
+.nav-bar h1{
+  margin-top: 10px;
+  font-size: 60px;
+  color:#f054b1;
+  font-family: "Artifika", serif;
+  cursor: pointer;
+  background: transparent;
+}
+.nav-bar ul li{
+  list-style-type: none;
+  font-size: 20px;
+  background: transparent;
+}
+.nav-bar ul li a{
+  background: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar li:hover a {/* Blue color on hover (optional) */
+  border-bottom: 2px solid #e67e10;
+   /* Add the bottom border on hover */
+}
+.nav-bar ul li select{
+  background: transparent;
+ color: white;
+  border: none;
+  font-size:20px;
+  cursor: pointer;
+}
+ .nav-bar ul li selectoption{
+  color:black;
+  border:none;
+  font-size:15px;
+  
+}
+.nav-bar ul li a{
+  text-decoration: none;
+  color: white;
+}
+.nav-bar ul li button{
+  background: #f054b1;
+  color: whitesmoke;
+  font-size: 16px;
+  padding:10px;
+  margin-top: -40px;
+  border-radius: 15px;
+  margin-right: -20px;
+  width: 150px;
+  border:none;
+  transition: 0.3s ease;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+.nav-bar ul li button:hover{
+  background: linear-gradient(to right, #ff99ff, #ff33ff);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6), 0 6px 6px rgba(255, 105, 180, 0.6);
+  transform: scale(1.2);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top:90px;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+
+}
+#promotion{
+  width:48%;
+  background: transparent;
+  border: none;
+}
+#promotion h1,p{
+  background: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#promotion button{
+  border-radius: 20px;
+  margin-top: 30px;
+  font-size: 25px;
+  border: none;
+  padding: 10px;
+  background: #f054b1;
+  transition: 0.3s ease;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+#promotion button:hover{
+  background: linear-gradient(to right, #ff99ff, #ff33ff);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6), 0 6px 6px rgba(255, 105, 180, 0.6);
+  transform: scale(1.2);
+}
+.fb-img{
+  width: 40%;
+  background: transparent;
+}
+#fb-img img{
+  width:500px;
+  height:300px;
+  border-radius:30px;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: transparent; /* For the entire footer background color */
+  margin-bottom:-5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  background-color: transparent;
+  margin: 10px;
+   /* Optional: Add a border to make boxes stand out */
+  border-radius:10px; /* Optional: Add some border-radius for rounded corners */
+  width: 172px;
+  height:135px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  text-align:center;
+}
+#box:hover{
+  box-shadow: 0 10px 20px rgb(228, 220, 220);
+  transform: scale(1.2);
+}
+#box p{
+  font-size: 15px;
+  margin-top: -14px;
+}
+#box > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 0;
+  background-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
