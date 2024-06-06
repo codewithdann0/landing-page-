@@ -24,9 +24,8 @@
   background: transparent;
 }
 .nav-bar h1{
-  margin-top: 10px;
-  font-size: 60px;
-  color:#f054b1;
+  margin-top: -10px;
+  font-size: 65px;
   font-family: "Artifika", serif;
   cursor: pointer;
   background: transparent;
@@ -66,7 +65,7 @@
   color: whitesmoke;
   font-size: 16px;
   padding:10px;
-  margin-top: -40px;
+  margin-top: -50px;
   border-radius: 15px;
   margin-right: -20px;
   width: 150px;
@@ -119,11 +118,16 @@
 .fb-img{
   width: 40%;
   background: transparent;
+  transition: 0.3s ease, box-shadow 0.3s ease;
 }
 #fb-img img{
   width:500px;
   height:300px;
   border-radius:30px;
+}
+#fb-img img:hover{
+  box-shadow: 0 10px 20px rgb(34, 8, 199);
+  transform: scale(1.1);
 }
 .footer {
   display: flex;
@@ -145,7 +149,7 @@
   border-radius:10px; /* Optional: Add some border-radius for rounded corners */
   width: 172px;
   height:135px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   transition: 0.3s ease, box-shadow 0.3s ease;
   text-align:center;
 }
@@ -165,4 +169,106 @@
   background-color: transparent;
 }
 
+#box #google i{
+  margin-bottom: 10px;
+}
 
+@media (max-width: 768px) {
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align:center;
+  }
+
+  .nav-bar h1 {
+    font-size: 44px;
+    margin-left: 20px;
+  }
+
+  .nav-bar ul li  {
+    font-size: 14px;
+  }
+  .nav-bar ul li  a{
+    display: none;
+  }
+  .nav-bar ul li button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .container {
+    margin-top: 100px;
+    width: 100%;
+  }
+  #promotion{
+    display: none;
+  }
+  #promotion button {
+    font-size: 16px;
+    padding: 8px;
+    display: none;
+  }
+  #box div p{
+    margin-top:15px;
+    font-size: 18px;
+  }
+  #fb-img{
+    text-align: center;
+  }
+  #fb-img img{
+    width:80%;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #box {
+    width: 90%;
+  }
+}
+
+
+
+/*select and option style*/
+.nav-bar ul li select {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  padding: 5px;
+}
+
+.nav-bar ul li select option {
+  color: black;
+  background: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.nav-bar ul li select option:hover {
+  background: (to right, #000080, rgb(49, 45, 45));
+  color: white;
+}
+
+/* Option Container Styling */
+.nav-bar ul li select:focus {
+  outline: none;
+  background: (to right, #000080, rgb(49, 45, 45));
+  color: white;
+  border-radius: 20px;
+}
+
+/* Custom dropdown arrow */
+.nav-bar ul li select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right 0.75rem center/8px 10px;
+  padding-right: 1.5rem;
+}
+
+.nav-bar ul li select option:checked {
+  background: #000080;
+  color: white;
+}

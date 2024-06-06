@@ -2,28 +2,35 @@
 import './App.css';
 
 function App() {
+
+  const handleWorkWithUsClick = () => {
+    const subject = encodeURIComponent('Interested in Working Together');
+    const body = encodeURIComponent('Hello,\n\nI am interested in working with you. Please contact me with more information.\n\nBest regards,');
+    window.location.href = `mailto:your_email_here@gmail.com?subject=${subject}&body=${body}`;
+  };
   return (
     <>
     <nav class="nav-bar">
     <h1>tier</h1>
       <ul>
         <li><select>
-          <option>WHAT WE CAN DO</option>
-          <option>WHAT WE CAN DO</option>
-          <option>WHAT WE CAN DO</option>
-          <option>WHAT WE CAN DO</option>
+          <option>What Can We Do </option>
+          <option>Facebook Advertising</option>
+          <option>Instagram Advertising</option>
+          <option>LinkedIn Advertising</option>
+          <option>Twitter Advertising</option>
         </select></li>
-        <li><a href='#blog'>BLOG</a></li>
-        <li><a href='#podcast'>PODCAST</a></li>
-        <li><a href='#careers'>CAREERS</a></li>
-        <li><button>WORK WITH US</button></li>
+        <li><a href='https://www.socialmediatoday.com/topic/facebook-ads/'>Blog</a></li>
+        <li><a href='https://www.socialmediaexaminer.com/podcasts/'>Podcast</a></li>
+        <li><a href='https://www.indeed.com/q-Facebook-Advertising-jobs.html'>Career</a></li>
+        <li><button onClick={handleWorkWithUsClick}>Work With Us</button></li>
       </ul>
     </nav>
     <div class="container">
             <div id="promotion">
-                <h1>Unlock Your Business Potential With Facebook & instagram Adversting</h1>
+                <h1>Unlock Your Business Potential With Facebook $ Instagram Adversting</h1>
                 <p>Facebook Premier Level Partner Agency</p>
-               <button>WOKR WITH US</button>
+               <button onClick={handleWorkWithUsClick}>Work With Us</button>
             </div>
             <div id="fb-img">
               <img src='./land-img.png' alt='The graph that show growth'/>
@@ -42,11 +49,11 @@ function App() {
                                
             </div>    
              <div>
-              <p>Facebook Premier level Agency Partner</p>
+              <p>Premier level Agency Partner</p>
             </div>
         </div>
          <div id='box'>
-              <div>
+              <div id="google">
                 <i class="fa-brands fa-google fa-2x"></i>
              </div>
              <div>
